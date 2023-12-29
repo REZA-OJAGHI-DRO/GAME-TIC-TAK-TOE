@@ -1,7 +1,7 @@
 # GAME-TIC-TAK-TOE
 **If you have a lot of information to display on your site, why don't you use my accordion menu**
 
-
+![Screenshot (39)](https://github.com/REZA-OJAGHI-DRO/GAME-TIC-TAK-TOE/assets/145910720/0b859b7c-3d24-4961-9ef1-201dd73e7409)
 
 - [Demo Project]( https://reza-ojaghi-dro.github.io/GAME-TIC-TAK-TOE/)
  
