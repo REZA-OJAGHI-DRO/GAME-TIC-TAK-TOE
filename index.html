@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="boot/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/output.css">
+        <link rel="stylesheet" href="css/master.css">
+    </head>
+    
+    <body>
+        <main class="w-[100%] relative h-[100vh] flex justify-center items-center bg-black bg-no-repeat bg-size">
+        <div class="w-[450px] h-[550px] absolute flex flex-wrap ">
+            <div id="gameEnd" class="w-[100%] h-[100%] bg-black flex justify-center items-center absolute transition-all duration-500">
+                <button onclick="playAgain()" class="w-[40%] h-[10%] border-[aqua]  border-4 rounded-lg text-[1.7rem] text-white px-2">Play Again</button>
+            </div>
+            <div id="game" class="w-[100%] h-[100%] bg-black flex flex-wrap transition-all duration-500 absolute">
+ 
+                <div class="w-[100%] h-[80%] flex flex-wrap font-bold">
+                    <div class="w-[100%] h-[10%] flex justify-center items-center">
+                        <div class="w-[33%] h-[100%] flex justify-start items-center text-[2rem]">
+                           <button id="back" class="w-[30%] h-[100%] flex justify-center items-center text-[2rem]">
+                            <i class="bi bi-arrow-left-square text-white"></i>
+                        </button> 
+                        </div>
+                        
+                        <p id="Turn" class="w-[33%] h-[100%] flex justify-center items-center text-[2rem]"></p>
+                        <p class="w-[33%] h-[100%] flex justify-center items-center text-white text-[2rem] ">is turn</p>
+                    </div>
+                    <div class="w-[100%] h-[90%] flex justify-center items-center flex-wrap">
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-b-4 border-r-4 w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-b-4 border-r-4 w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-b-4  w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-b-4 border-r-4 w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-b-4 border-r-4 w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-b-4  w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-r-4 w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black border-[aqua] border-r-4 w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                        <div data-status="off" data-game="m" data-tie="off"
+                            class="box cursor-pointer shadow-xl bg-black w-[33.3333%] h-[33.3333%] flex justify-center items-center text-[6rem]">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%] h-[20%]">
+                    <div class="w-[100%] h-[100%] flex text-[2rem] font-bold">
+                        <div id="playX" class="w-[33%] h-[100%] flex flex-wrap text-white">
+                            <p class="w-[100%] h-[50%] flex justify-center items-center">player X</p>
+                            <p id="player1" class="w-[100%] h-[50%] flex justify-center items-center">0</p>
+                        </div>
+                            <div class="w-[33%] h-[100%] flex flex-wrap text-white">
+                            <p class="w-[100%] h-[50%] flex justify-center items-center">Tie</p>
+                            <p id="tie" class="w-[100%] h-[50%] flex justify-center items-center">0</p>
+                        </div>
+                        <div id="playO" class="w-[33%] h-[100%] flex flex-wrap text-white">
+                            <p class="w-[100%] h-[50%] flex justify-center items-center">player O</p>
+                            <p id="player2" class="w-[100%] h-[50%] flex justify-center items-center">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gameStart" class="w-[100%] h-[100%] absolute bg-black flex flex-wrap gap-3 justify-center content-center transition-all duration-500">
+                <p class="w-[100%] h-[20%] flex justify-center items-center uppercase text-white text-[3rem]">tic tac toe</p>
+                <button  onclick="NewGame()" class="w-[40%] h-[10%] border-[aqua]  border-4 rounded-lg text-[1.7rem] uppercase text-white px-2">New Game </button>
+                <button id="resume" class="w-[40%] h-[10%] border-[aqua]  border-4 rounded-lg text-[1.7rem] uppercase text-white px-2">resume</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/js.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>
