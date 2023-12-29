@@ -9,7 +9,7 @@
 
 - Created - 2023-12-25
 
-- Technologies Used - Html , tailwind , js ,  GAME-TIC-TAK-TOE
+- Technologies Used - Html , tailwind , js , local storage ,  GAME-TIC-TAK-TOE
 
 - Hooks Used : useState 
 
